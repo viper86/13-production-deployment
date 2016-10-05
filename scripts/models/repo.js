@@ -7,9 +7,6 @@
     // TODO: refactor this request into an $.ajax call
     $.ajax({url: '/github/users/codefellows-portland-301d6/repos' +
           '?per_page=10&sort=updated',
-          headers: {
-            Authorization: 'token ' + githubToken
-          },
           success :function(data) {
             reposObj.allRepos = data;
             callback();
